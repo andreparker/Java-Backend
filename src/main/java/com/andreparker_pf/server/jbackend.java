@@ -4,7 +4,6 @@ package com.andreparker_pf.server;
  * Created by andre on 5/11/15.
  */
 
-import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
 
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -14,6 +13,9 @@ import org.glassfish.jersey.server.ResourceConfig;
 import java.net.URI;
 
 public class jbackend {
+
+    private jbackend()
+    {}
 
     public static final String RESTFUL_URL = "http://localhost:8080/api/";
 
