@@ -48,7 +48,7 @@ public class DbApiControllerTest extends JerseyTest {
             throw ex;
         }
 
-        assertNotEquals(output,"");
+        assertNotEquals(output,"error");
     }
 
     @Test
