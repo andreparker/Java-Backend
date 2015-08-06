@@ -5,7 +5,6 @@ import com.andreparker_pf.entities.MessageContact;
 import org.hibernate.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.Service;
 import org.hibernate.service.ServiceRegistry;
 
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class MessageContactHibernateRepository implements IMessageContactReposit
     }
 
     @Override
-    public List<MessageContact> GetAll() {
+    public List<MessageContact> getAll() {
         List<MessageContact> contacts = null;
         Transaction transaction = null;
         Session session = factory.openSession();
@@ -76,7 +75,7 @@ public class MessageContactHibernateRepository implements IMessageContactReposit
     }
 
     @Override
-    public int Add(MessageContact contact) {
+    public int add(MessageContact contact) {
         Session session = factory.openSession();
         Transaction transaction = null;
         int id = -1;
@@ -100,7 +99,7 @@ public class MessageContactHibernateRepository implements IMessageContactReposit
     }
 
     @Override
-    public void Remove(int id)
+    public void remove(int id)
     {
         Session session = factory.openSession();
         Transaction transaction = null;
@@ -129,12 +128,12 @@ public class MessageContactHibernateRepository implements IMessageContactReposit
     }
 
     @Override
-    public void Remove(MessageContact contact) {
-        Remove(contact.getId());
+    public void remove(MessageContact contact) {
+        remove(contact.getId());
     }
 
     @Override
-    public void DeleteAll() {
+    public void deleteAll() {
         Session session = factory.openSession();
         Transaction transaction = null;
 

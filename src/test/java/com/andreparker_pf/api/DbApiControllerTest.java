@@ -7,6 +7,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 
 import javax.ws.rs.client.Entity;
@@ -44,8 +45,10 @@ public class DbApiControllerTest extends JerseyTest {
         catch (Exception ex)
         {
             ex.printStackTrace();
+            throw ex;
         }
 
+        assertNotEquals(output,"");
     }
 
     @Test
@@ -63,6 +66,7 @@ public class DbApiControllerTest extends JerseyTest {
         catch(Exception ex)
         {
             ex.printStackTrace();
+            throw ex;
         }
 
         assertEquals("Contacts",output);

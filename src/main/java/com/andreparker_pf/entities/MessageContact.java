@@ -78,4 +78,14 @@ public class MessageContact {
 
         return super.equals(obj);
     }
+
+    @Override
+    public int hashCode() {
+        int hashcode = 1;
+        hashcode = hashcode * 31 + id;
+        hashcode = hashcode * 31 + email == null ? 0 : email.hashCode();
+        hashcode = hashcode * 31 + message.hashCode();
+        return hashcode;
+    }
+
 }

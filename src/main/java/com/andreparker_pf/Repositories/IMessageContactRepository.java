@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface IMessageContactRepository {
 
-    List<MessageContact> GetAll();
-    int Add(MessageContact contact);
-    void Remove(int id);
-    void Remove(MessageContact contact);
-    void DeleteAll();
+    List<MessageContact> getAll();
+    int add(MessageContact contact);
+    void remove(int id);
+    void remove(MessageContact contact);
+    void deleteAll();
 }
